@@ -36,6 +36,27 @@ if ($stm = $connect->prepare('SELECT * FROM users')) {
 
 ?>
 
+<style>
+
+html, body {
+  height: 90%;
+}
+
+.wrapper {
+  min-height: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+
+
+</style>
+<div class="wrapper">
+    <!-- Contenuto della pagina -->
 
 
         <h1 class="mt-5 mar">Users management</h1>
@@ -70,6 +91,9 @@ if ($stm = $connect->prepare('SELECT * FROM users')) {
             </table>
         </div>
         <a href="users_add.php"> Add new user</a>
+
+
+  </div>
 
 
 

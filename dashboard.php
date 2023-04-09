@@ -24,4 +24,3 @@ include('includes/header.php');
 </div>
 
 <?php include "mails_received.php"; ?>
-<?php include('includes/footer.php'); ?>

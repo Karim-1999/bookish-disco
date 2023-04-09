@@ -85,6 +85,7 @@ include('includes/functions.php');
     margin-bottom: 0.5rem;
     font-size: 4.25rem;
     font-weight: 900;
+    color: white;
   }
 
   .carousel-caption p {
@@ -94,7 +95,7 @@ include('includes/functions.php');
   }
 
   .textstatic {
-    width: 400px;
+    max-width: 400px;
   }
 
   .text-cont {
@@ -181,7 +182,7 @@ include('includes/functions.php');
     <div class="col-md-12 ">
       <div class="text-cont">
         <div class="text-center textstatic">
-          <h2 class="text-center ">Fotogallery</h2>
+          <h2 class="text-center headline">Fotogallery</h2>
           <p class="text-center ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</p>
         </div>
       </div>
@@ -237,10 +238,10 @@ include('includes/functions.php');
 <!-- contact form  -->
 
 
-<?php include("form.php") ?> 
+<?php  include("form.php")  ?> 
 
 
 
 
 
-<?php include "includes/footer.php"; ?>
+<?php  include "includes/footer.php";  ?>
