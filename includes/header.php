@@ -18,19 +18,52 @@
     <!-- MDB -->
     <link rel="stylesheet" href="css/mdb.min.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <style>  .flex {
-
-  display: flex;
-  justify-content: space-between;
-}
+    <style>  
 
 
 .navbar-nav{
-  float: right;
   position: absolute;
-  right: 30px;
+  right: 60px;
   z-index: 3;
-  background-color:white ;
+ 
+  
+}
+
+.navbar-brand{
+  margin: 11px;
+}
+
+.nav-item a{
+  border-radius: 10%;
+  transition: 0.7s;
+   color: inherit !important;
+}
+.nav-item a:hover{
+  background-color: rgba(242, 14, 14, 0.5);
+  color: white !important;
+  animation: forwards;
+
+}
+
+/* media query mobile */
+
+@media (max-width: 991px) {
+  .navbar-nav{
+    float: none;
+    position: relative;
+    right: 0;
+    z-index: 3;
+    
+  }
+  .navbar-brand{
+    margin: 20px;
+  }
+}
+@media (max-width: 491px) {
+  #margin{
+    margin: 0 10px !important;; 
+  }
+  
 }
 
 
@@ -38,10 +71,10 @@
  
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid flex">
+<nav class="navbar navbar-expand-lg navbar-light ">
+  <div class="container-fluid" id="margin" style="margin: 0 60px">
     <a class="navbar-brand d-flex justify-content-between" href="#">
-      <img src="https://www.emotiondesign.it/wp-content/uploads/2022/02/logo-gdpr.jpg" width="90px" alt="Logo">
+      <img src="images/logo-rosso.png" width="100px" alt="Logo">
       <span>  </span> <!-- Aggiunge uno spazio vuoto tra l'immagine del logo e le altre voci di menu -->
     </a>
     <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarNav"
@@ -51,22 +84,28 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/cms">Home</a>
+          <a class="nav-link "  href="/cms">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="dashboard.php">Dashboard</a>
+          <a class="nav-link  " href="dashboard.php">Dashboard</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="logout.php">Logout</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="login.php">login</a>
-        </li>
+        <?php
+ include('includes/config.php');
+  if(isset($_SESSION['username'])) {
+    // l'utente è già loggato, mostra il link "logout"
+     echo '<li class="nav-item"><a class="nav-link" href="logout.php">Logout</a></li>';
+  } else {
+    // l'utente non è loggato, mostra il link "login"
+   echo '<li class="nav-item"><a class="nav-link" href="login.php">Login</a></li>';
+  }
+?>
       </ul>
     </div>
   </div>
 </nav>
 
 
+<!-- 
+<button id="dark-mode-toggle">Modalità scura</button> -->
 
     

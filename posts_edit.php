@@ -1,11 +1,11 @@
 <?php
 
-include('includes/config.php');
+include('includes/header.php');
 include('includes/database.php');
 include('includes/functions.php');
 secure();
 
-include('includes/header.php');
+
 
 if (isset($_POST['title'])) {
 
@@ -46,14 +46,14 @@ if (isset($_GET['id'])) {
 
 
             ?>
-            <div class="container mt-5">
+            <div class="container mt-5 mt-10 mb-10">
                 <div class="row justify-content-center">
                     <div class="col-md-6">
                         <h1 class="display-1">Edit post</h1>
 
                         <form method="post">
                             <!-- Title input -->
-                            <div class="form-outline mb-4">
+                            <div class="form-outline mb-4" >
                                 <input type="text" id="title" name="title" class="form-control"
                                     value="<?php echo $post['title'] ?>" />
                                 <label class="form-label" for="title">Title</label>
@@ -65,8 +65,8 @@ if (isset($_GET['id'])) {
                                 <textarea name="content" id="content"><?php echo $post['content'] ?></textarea>
                             </div>
                             <div class="form-outline mb-4">
-                                <textarea name="Url-image" id="Url-image"><?php echo $post['Url-image'] ?></textarea>
-                            </div>
+                                <textarea type="text"class="form-control" name="Url-image" id="Url-image"><?php echo $post['Url-image'] ?></textarea>
+                                <label class="form-label" for="Url image">Url image</label></div>
 
                             <!-- Date select -->
                             <div class="form-outline mb-4">

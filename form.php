@@ -1,4 +1,4 @@
-<div class="center color">
+<div id="form123" class="center color ">
     <!--Section: Contact v.2-->
     <section class="mb-4">
 
@@ -17,14 +17,31 @@
             }
 
             .width {
-                width: 85%;
+                width: 100%;
+                display: flex;
+               justify-content: center;
             }
 
             .color {
                 background-color: #f5f5f5;
+                color: black;
                 width: 100%;
                 padding: 30px 200px ;
                 margin-top: 60px;
+            }
+
+            #contact-form {
+                max-width: 600px;
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                margin: auto;
+            }
+
+
+            .form-group input{
+                width: 100%;
+                border: none;
             }
 
             /* media query mobili */
@@ -79,6 +96,7 @@
                     </div>
                 </form>
             </div>
+           
         </div>
     </section>
 </div>

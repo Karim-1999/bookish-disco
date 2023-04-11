@@ -10,7 +10,7 @@ include('includes/functions.php');
 <style>
   .carousel-item img {
     width: 100%;
-    height: 500px;
+    height: 600px;
     object-fit: cover;
   }
 
@@ -83,9 +83,10 @@ include('includes/functions.php');
 
   .carousel-caption h5 {
     margin-bottom: 0.5rem;
-    font-size: 4.25rem;
+    font-size: 5.25rem;
     font-weight: 900;
     color: white;
+    width: 50%;
   }
 
   .carousel-caption p {
@@ -108,7 +109,7 @@ include('includes/functions.php');
 
   .card-img-top {
     width: 100%;
-    height: 15vw;
+   height: 300px;
     object-fit: cover;
   }
 
@@ -214,8 +215,8 @@ include('includes/functions.php');
       <div class="container mt-5">
         <div class="row">
           <?php while ($record = mysqli_fetch_assoc($result)) { ?>
-            <div class="col-md-6">
-              <div class="card h-100">
+            <div class="col-md-6 mb-4">
+              <div id="card" class="card h-100">
                 <div class="card-body"><a  href="single.php?id=<?php echo $record['id']; ?>" >
                   <img src="<?php echo $record['Url-image']; ?>" class="img-fluid mb-4 card-img-top rounded">
                   <h5 class="card-title"><?php echo $record['title']; ?></h5>

@@ -1,11 +1,11 @@
 <?php
 
-include('includes/config.php');
+include('includes/header.php');
 include('includes/database.php');
 include('includes/functions.php');
 secure();
 
-include('includes/header.php');
+
 
 if (isset($_POST['title'])){
 
@@ -34,7 +34,7 @@ if (isset($_POST['title'])){
 
 
 ?>
-<div class="container mt-5">
+<div class="container mt-5 mb-10">
     <div class="row justify-content-center">
         <div class="col-md-10">
         <h1 class="display-1">Add post</h1>
@@ -50,7 +50,8 @@ if (isset($_POST['title'])){
                 </div>
                 <!-- Image input -->
                 <div class="form-outline mb-4">
-                    <textarea name="Url-image" id="Url-image" ></textarea>
+                    <input type="text" name="Url-image" id="Url-image" class="form-control" ></input>
+                    <label class="form-label" for="Url Image">Url Image</label>
                 </div>
                 <!-- Date select -->
                 <div class="form-outline mb-4">

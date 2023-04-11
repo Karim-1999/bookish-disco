@@ -1,9 +1,9 @@
 <?php
 
-include('includes/config.php');
+
 include('includes/database.php');
 include('includes/functions.php');
-secure();
+
 
 include('includes/header.php');
 
@@ -23,15 +23,15 @@ if (isset($_GET['id'])) {
 
 
 ?>
-            <div class="container mt-5">
+            <div class="container mt-5 mb-10">
                 <div class="row justify-content-center">
                     <div class="col-md-6">
 
 
                         <form method="post">
                             <!-- Title input -->
-                            <div class="form-outline mb-4">
-                                <?php echo $post['title'] ?>
+                            <div class="form-outline mb-4"> <h1><?php echo $post['title'] ?></h1>
+                                
 
                             </div>
                             <div class="form-outline mb-4">

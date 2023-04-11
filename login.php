@@ -1,6 +1,6 @@
 <?php
 
-include('includes/config.php');
+include('includes/header.php');
 include('includes/database.php');
 include('includes/functions.php');
 
@@ -10,7 +10,7 @@ if(isset($_SESSION['id'])){
 }
 
 
-include('includes/header.php');
+
 
 
 
@@ -42,6 +42,8 @@ if (isset($_POST['email'])) {
 }
 
 ?>
+
+<div class="wrapper">
 <div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-6">
@@ -67,7 +69,7 @@ if (isset($_POST['email'])) {
 
     </div>
 </div>
-
+</div>
 
 <?php
 include('includes/footer.php');
