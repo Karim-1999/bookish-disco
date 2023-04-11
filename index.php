@@ -124,9 +124,71 @@ include('includes/functions.php');
     color: blue;
   }
 
-  ::selection {
-  background-color: red;
+.hero-section {
+ padding-top: 120px;
+ 
 }
+
+/* media query pc\mobile post  */
+
+@media (max-width: 768px) {
+  .pcpost {
+    display: none;
+  }
+ 
+
+  }
+@media (min-width: 768px) {
+ 
+  .mobilepost {
+    display: none;
+  }
+  .slider-controls{
+    display: none;
+  }
+
+  }
+
+  .mobilepost .slider {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.mobilepost .card {
+  flex: 0 0 auto;
+  width: 85%;
+  height: 520px;
+  margin: 0 10px;
+  scroll-snap-align: center;
+}
+
+.slider-controls {
+  position: absolute;
+  top: 160%;
+  transform: translateY(-50%);
+  margin: 0;
+  width: 100%;
+  border: none;
+}
+
+#prevBtn {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  border: none;
+}
+
+#nextBtn {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  border: none;
+}
+
 </style>
 
 <div class="hero-section">
@@ -212,11 +274,11 @@ include('includes/functions.php');
 
 ?>
     <?php while ($record = mysqli_fetch_assoc($result)) { ?>
-      <div class="container mt-5">
+      <div class="container mt-5 pcpost">
         <div class="row">
           <?php while ($record = mysqli_fetch_assoc($result)) { ?>
             <div class="col-md-6 mb-4">
-              <div id="card" class="card h-100">
+              <div id="card" class="card  h-100">
                 <div class="card-body"><a  href="single.php?id=<?php echo $record['id']; ?>" >
                   <img src="<?php echo $record['Url-image']; ?>" class="img-fluid mb-4 card-img-top rounded">
                   <h5 class="card-title"><?php echo $record['title']; ?></h5>
@@ -234,7 +296,47 @@ include('includes/functions.php');
   }
 } ?>
 
-<!-- end blog section -->
+<!-- for mobile  -->
+<?php if ($stm = $connect->prepare('SELECT * FROM posts')) {
+  $stm->execute();
+
+  $result = $stm->get_result();
+
+
+
+
+  if ($result->num_rows > 0) {
+
+?>
+    <?php while ($record = mysqli_fetch_assoc($result)) { ?>
+      <div class="container mt-5 mobilepost">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="slider ">
+        <?php while ($record = mysqli_fetch_assoc($result)) { ?>
+          <div class="card card-group1">
+            <a href="single.php?id=<?php echo $record['id']; ?>">
+              <img src="<?php echo $record['Url-image']; ?>" class="card-img-top" alt="Card image">
+              <div class="card-body">
+                <h5 class="card-title"><?php echo $record['title']; ?></h5>
+                <p class="card-text"><?php echo substr(strip_tags($record['content']), 0, 230) . '...'; ?></p>
+              </div>
+            </a>
+          </div>
+        <?php } ?>
+      </div>
+    </div>
+  </div>
+</div><div class="slider-controls">
+          <button class="slider-control" id="prevBtn">&lt;</button>
+          <button class="slider-control" id="nextBtn">&gt;</button>
+        </div>
+<?php }
+  }
+} ?>
+
+<!-- end blog section  
+-->
 
 <!-- contact form  -->
 

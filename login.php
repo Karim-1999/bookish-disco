@@ -44,7 +44,7 @@ if (isset($_POST['email'])) {
 ?>
 
 <div class="wrapper">
-<div class="container mt-5">
+<div style="padding-top: 120px;" class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-6">
             <form method="post">

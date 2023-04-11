@@ -40,7 +40,7 @@ if ($stm = $connect->prepare('SELECT * FROM posts')){
 
 
 
-    <div class="mt-5"> 
+    <div style="padding-top: 120px;" class="mt-5"> 
         <h1 class="mar">Posts management</h1>
         <div class="cont1" >
        

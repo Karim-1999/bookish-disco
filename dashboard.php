@@ -9,7 +9,7 @@ secure();
 
 
 ?>
-<div class=" mt-5">
+<div style="padding-top: 120px;" class=" mt-5">
     <div class="row justify-content-center">
         <div class="col-md-6 text-center">
         <h1 class="display-1">Dashboard </h1>

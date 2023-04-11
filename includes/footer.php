@@ -91,22 +91,29 @@
   }
 
 
-.cursor {
-  position: absolute;
-  top: -10px;
-  left: -10px;
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-  background-color: red;
-  z-index: 999;
-  -webkit-box-shadow: 0px 0px 27px 2px rgba(255,98,30,0.59); 
-box-shadow: 0px 0px 27px 2px rgba(255,98,30,0.59);
-}
+  .cursor {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: red;
+    z-index: 999;
+    -webkit-box-shadow: 0px 0px 27px 2px rgba(255, 98, 30, 0.59);
+    box-shadow: 0px 0px 27px 2px rgba(255, 98, 30, 0.59);
+  }
 
+  /* media query mobile */
+
+  @media screen and (max-width: 900px) {
+    .cursor {
+      display: none;
+    }
+  }
 </style>
 
-  <div class="cursor">
+<div class="cursor">
 </div>
 
 <footer class="red">
@@ -129,13 +136,14 @@ box-shadow: 0px 0px 27px 2px rgba(255,98,30,0.59);
 
 
       </div>
-    </div> <div id="dark-mode-toggle"> 
-    <div class="form-check form-switch">
-  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
-  <label class="form-check-label" for="flexSwitchCheckDefault"><i class="fas fa-moon fa-lg"></i></label>
-</div>
-      
+    </div>
+    <div id="dark-mode-toggle">
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
+        <label class="form-check-label" for="flexSwitchCheckDefault"><i class="fas fa-moon fa-lg"></i></label>
       </div>
+
+    </div>
 
     <div>
 
@@ -184,13 +192,13 @@ box-shadow: 0px 0px 27px 2px rgba(255,98,30,0.59);
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-<script src="js/jquery.min.js"></script>
+
 <script>
   $(document).ready(function() {
     // Seleziona il pulsante toggle
     var darkModeToggle = $('#dark-mode-toggle');
 
-    // Aggiungi l'evento di click al pulsante toggle
+    // evento di click al pulsante toggle
     darkModeToggle.on('click', function() {
       // Seleziona il body della pagina
       var body = $('body');
@@ -199,25 +207,25 @@ box-shadow: 0px 0px 27px 2px rgba(255,98,30,0.59);
         // Se sì, rimuovi la classe .dark-mode
         body.removeClass('dark-mode');
         // Aggiorna il testo del pulsante toggle
-       /*  darkModeToggle.text('Modalità scura'); */
+        /*  darkModeToggle.text('Modalità scura'); */
         // Memorizza la modalità scura nel local storage
         localStorage.setItem('dark-mode', 'off');
-    /*     $('.color').css('background-color', '#f5f5f5'); */
+        /*     $('.color').css('background-color', '#f5f5f5'); */
         $('.color').css({
-  'color': 'black',
-  'background-color': '#f5f5f5'
-});
+          'color': 'black',
+          'background-color': '#f5f5f5'
+        });
       } else {
         body.addClass('dark-mode');
         // Aggiorna il testo del pulsante toggle
-       /*  darkModeToggle.text('Modalità chiara'); */
+        /*  darkModeToggle.text('Modalità chiara'); */
         // Memorizza la modalità scura nel local storage
         localStorage.setItem('dark-mode', 'on');
-       /*  $('.color').css('background-color', '#333'); */
+        /*  $('.color').css('background-color', '#333'); */
         $('.color').css({
-  'color': 'white',
-  'background-color': '#333'
-});
+          'color': 'white',
+          'background-color': '#333'
+        });
       }
     });
 
@@ -226,30 +234,127 @@ box-shadow: 0px 0px 27px 2px rgba(255,98,30,0.59);
       // Aggiungi la classe .dark-mode al body
       $('body').addClass('dark-mode');
       // Aggiorna il testo del pulsante toggle
-     /*  $('#dark-mode-toggle').text('Modalità chiara'); */
+      /*  $('#dark-mode-toggle').text('Modalità chiara'); */
     }
 
 
-   
-  }); 
+
+  });
 </script>
 
 <script>
-$(document).ready(function() {
-  $(document).on("mousemove", function(event) {
-  setTimeout(function() {
-    $(".cursor").css({
-      "top": event.pageY + "px",
-      "left": event.pageX + "px"
+  $(document).ready(function() {
+    $(document).on("mousemove", function(event) {
+      setTimeout(function() {
+        $(".cursor").css({
+          "top": event.pageY + "px",
+          "left": event.pageX + "px"
+        });
+      }, 50);
     });
-  }, 50);
-});
-});
+  });
 
 
+
+
+  $(document).ready(function() {
+    $(window).scroll(function() {
+      var scrollPosition = $(this).scrollTop();
+      if (scrollPosition > 100) {
+        $('#navbar').addClass('navbar-smaller');
+        $('.navbar-brand').css('margin', '0px');
+      } else {
+        $('#navbar').removeClass('navbar-smaller');
+        $('.navbar-brand').css('margin', '11px');
+      }
+    });
+  });
+
+
+ /*  $(document).ready(function() {
+    $('.slider').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      infinite: true,
+      speed: 300,
+      dots: true,
+      arrows: false,
+      responsive: [{
+        breakpoint: 767, // breakpoint per dispositivi mobili
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: false,
+        }
+      }]
+    });
+  }); */
+</script>
+<script>
+ /*  $(document).ready(function() {
+    $('.slider').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      infinite: true,
+      speed: 300,
+      dots: false,
+      arrows: true, // impostiamo la proprietà arrows a true
+      prevArrow: '<button type="button" class="slick-prev">Previous</button>', // aggiungiamo il pulsante per lo scorrimento a sinistra
+      nextArrow: '<button type="button" class="slick-next">Next</button>', // aggiungiamo il pulsante per lo scorrimento a destra
+      responsive: [{
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: false,
+          arrows: true,
+          prevArrow: '<button type="button" class="slick-prev">Previous</button>',
+          nextArrow: '<button type="button" class="slick-next">Next</button>',
+        }
+      }]
+    });
+  }); */
+
+
+  let slideIndex = 0;
+const slides = document.querySelectorAll('.card-group1');
+const prevBtn = document.querySelector('#prevBtn');
+const nextBtn = document.querySelector('#nextBtn');
+
+// Nascondi tutte le card tranne la prima
+for (let i = 1; i < slides.length; i++) {
+  slides[i].style.display = 'none';
+}
+
+// Funzione per passare alla slide successiva
+function nextSlide() {
+  slides[slideIndex].style.display = 'none';
+  slideIndex++;
+  if (slideIndex >= slides.length) {
+    slideIndex = 0;
+  }
+  slides[slideIndex].style.display = 'flex';
+}
+
+// Funzione per passare alla slide precedente
+function prevSlide() {
+  slides[slideIndex].style.display = 'none';
+  slideIndex--;
+  if (slideIndex < 0) {
+    slideIndex = slides.length - 1;
+  }
+  slides[slideIndex].style.display = 'flex';
+}
+
+// Aggiungi eventi ai pulsanti per lo scorrimento
+nextBtn.addEventListener('click', nextSlide);
+prevBtn.addEventListener('click', prevSlide);
 </script>
 
+
+
 <?php get_message();  ?>
+
 </body>
 
 </html>

@@ -29,7 +29,8 @@ if (isset($_POST['username'])){
 
 
 ?>
-<div class="container mt-5">
+<div class="wrapper">
+<div style="padding-top: 120px;" class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-6">
         <h1 class="display-1">Add user</h1>
@@ -69,7 +70,7 @@ if (isset($_POST['username'])){
         </div>
 
     </div>
-</div>
+</div></div>
 
 
 <?php

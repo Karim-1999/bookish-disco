@@ -59,7 +59,7 @@ html, body {
     <!-- Contenuto della pagina -->
 
 
-        <h1 class="mt-5 mar">Users management</h1>
+        <h1 style="padding-top: 120px;" class="mt-5 mar">Users management</h1>
         <div class="cont1">
 
             <table>

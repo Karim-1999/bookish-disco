@@ -52,7 +52,8 @@ if (isset($_GET['id'])) {
 
 
 ?>
-            <div class="container mt-5">
+<div class="wrapper">
+            <div style="padding-top: 120px;" class="container mt-5">
                 <div class="row justify-content-center">
                     <div class="col-md-6">
                         <h1 class="display-1">Edit user</h1>
@@ -92,7 +93,7 @@ if (isset($_GET['id'])) {
                     </div>
 
                 </div>
-            </div>
+            </div></div>
 
 
 <?php

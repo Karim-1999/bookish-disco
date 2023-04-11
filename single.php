@@ -23,7 +23,7 @@ if (isset($_GET['id'])) {
 
 
 ?>
-            <div class="container mt-5 mb-10">
+            <div style="padding-top: 120px;" class="container mt-5 mb-10">
                 <div class="row justify-content-center">
                     <div class="col-md-6">
 

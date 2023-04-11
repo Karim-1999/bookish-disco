@@ -46,7 +46,7 @@ if (isset($_GET['id'])) {
 
 
             ?>
-            <div class="container mt-5 mt-10 mb-10">
+            <div style="padding-top: 120px;" class="container mt-5 mt-10 mb-10">
                 <div class="row justify-content-center">
                     <div class="col-md-6">
                         <h1 class="display-1">Edit post</h1>
