@@ -23,7 +23,7 @@ $result = $connect->query($sql);
 if (!$result) {
     die("Couldn't enter data: " . $connect->error);
 }
-echo "Thank You For Contacting Us "
+echo "Thank You For Contacting Us  -->  <a href=\"index.php\" > To go back </a>  "
 
 ; $connect->close();
  ?>

@@ -21,4 +21,4 @@ secure();  // secure serve per autenticare l'utente
     </div>
 </div>
 
-<?php include "mails_received.php"; ?>
+<?php include "includes/mails_received.php"; ?>

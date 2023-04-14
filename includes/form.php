@@ -8,65 +8,12 @@
         <p class="text-center w-responsive mx-auto mb-5 textstatic">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
             a matter of hours to help you.</p>
 
-        <style>
-            .contform {
-                width: 100%;
-                height: 100%;
-                display: flex;
-                justify-content: center;
-            }
-
-            .width {
-                width: 100%;
-                display: flex;
-               justify-content: center;
-            }
-
-            .color {
-                background-color: #f5f5f5;
-                color: black;
-                width: 100%;
-                padding: 30px 200px ;
-                margin-top: 60px;
-            }
-
-            #contact-form {
-                max-width: 600px;
-                display: flex;
-                justify-content: space-between;
-                flex-direction: column;
-                margin: auto;
-            }
-
-
-            .form-group input{
-                width: 100%;
-                border: none;
-            }
-
-            /* media query mobili */
-
-            @media screen and (max-width: 600px) {
-                .contform {
-                    padding: 30px 10px ;
-                }
-               
-                .color {
-                    padding: 30px 10px ;
-                }
-
-                .marsis{
-                    margin: 0 !important;
-                }
-            }
-        </style>
-
         <div class="contform">
 
 
             <!--Grid column-->
             <div class="col-md-9 m-5 mb-md-0 mb-5 marsis">
-                <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+                <form id="contact-form" name="contact-form" action="./mail.php" method="POST">
                     <div class="row ">
                         <div class="col-md-6">
                             <div class="form-group">

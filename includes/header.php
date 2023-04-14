@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CMS </title>
+  <title>CMS Karim</title>
   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
@@ -16,65 +16,6 @@
   <link rel="stylesheet" href="css/style.css" />
 
   <style>
-    .navbar-nav {
-      position: absolute;
-      right: 60px;
-      z-index: 3;
-    }
-
-    .navbar-brand {
-      margin: 11px;
-    }
-
-    .nav-item a {
-      border-radius: 10%;
-      transition: 0.7s;
-      color: inherit !important;
-    }
-
-    .nav-item a:hover {
-      background-color: rgba(242, 14, 14, 0.5);
-      color: white !important;
-      animation: forwards;
-
-    }
-
-    /* media query mobile */
-
-    @media (max-width: 991px) {
-      .navbar-nav {
-        float: none;
-        position: relative;
-        right: 0;
-        z-index: 3;
-
-      }
-
-      .navbar-brand {
-        margin: 20px;
-      }
-    }
-
-    @media (max-width: 491px) {
-      #margin {
-        padding: 0 10px !important;
-        ;
-      }
-
-    }
-
-    #navbar {
-      background-color: inherit;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 700;
-    }
-
-    .navbar-smaller {
-      height: 90px;
-      transition: 0.3s ease-in-out;
-    }
   </style>
 
 </head>
@@ -98,7 +39,8 @@
             <a class="nav-link  " href="dashboard.php">Dashboard</a>
           </li>
           <?php
-          include('includes/config.php');
+          
+session_start();
           if (isset($_SESSION['username'])) {
             // l'utente è già loggato, mostra il link "logout"
             echo '<li class="nav-item"><a class="nav-link" href="logout.php">Logout</a></li>';

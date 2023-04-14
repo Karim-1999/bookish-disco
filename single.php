@@ -25,10 +25,10 @@ if (isset($_GET['id'])) {
 ?>
             <div style="padding-top: 120px;" class="container mt-5 mb-10">
                 <div class="row justify-content-center">
-                    <div class="col-md-6">
+                    <div class="col-md-8">
 
 
-                        <form method="post">
+                        <article >
                             <!-- Title input -->
                             <div class="form-outline mb-4"> <h1><?php echo $post['title'] ?></h1>
                                 
@@ -51,7 +51,7 @@ if (isset($_GET['id'])) {
 
 
 
-                        </form>
+                        </article>
 
 
 

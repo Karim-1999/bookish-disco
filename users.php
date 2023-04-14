@@ -36,25 +36,7 @@ if ($stm = $connect->prepare('SELECT * FROM users')) {
 
 ?>
 
-<style>
 
-html, body {
-  height: 90%;
-}
-
-.wrapper {
-  min-height: 90%;
-  display: flex;
-  flex-direction: column;
-}
-
-.footer {
-  margin-top: auto;
-}
-
-
-
-</style>
 <div class="wrapper">
     <!-- Contenuto della pagina -->
 

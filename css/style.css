@@ -1,5 +1,115 @@
+/*
+ *~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~**~*~*#
+ #                                                                     #
+ # General Style                                                       #
+ #                                                                     #
+ # ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~**~*~#
+*/
 
-/* css per notifiche toast ma per qualche starno motivo che ancora non so hanno smesso di funzionare prima funzionavano */
+/* le variabili colore  */
+:root {
+  --colore-rosso: #D8263E;
+  }
+
+/*   var(--colore-rosso) */
+
+html,
+body {
+  height: 90%;
+}
+
+.cursor {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  height: 20px;
+  width: 20px;
+  pointer-events: none;
+  border-radius: 50%;
+  background-color: var(--colore-rosso);
+  z-index: 999;
+  -webkit-box-shadow: 0px 0px 27px 2px rgba(255, 98, 30, 0.59);
+  box-shadow: 0px 0px 27px 2px rgba(255, 98, 30, 0.59);
+}
+
+.wrapper {
+  min-height: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+::selection {
+  background-color: var(--colore-rosso);
+  color: white;
+}
+
+footer {
+  background-color: var(--colore-rosso);
+  color: white;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap");
+
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color: white;
+  overflow-x: hidden;
+}
+
+h5 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 8px;
+  color: var(--colore-rosso);
+}
+
+.headline {
+  font-size: 4.5rem;
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 8px;
+  color: var(--colore-rosso);
+}
+
+.btn {
+  background-color: var(--colore-rosso);
+  color: white;
+}
+
+/* media query mobile headline */
+
+@media screen and (max-width: 768px) {
+  .headline {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .headline {
+    font-size: 1.5rem;
+  }
+}
+
+.dark-mode {
+  background-color: #333 !important;
+  color: #fff;
+}
+
+/*|| General style 
+===================================================================  */
+
+/*
+ *~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~**~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*#
+ #                                                                                                                             #
+ # css per notifiche toast ma per qualche starno motivo che ancora non so hanno smesso di funzionare prima funzionavano        #
+ #                                                                                                                             #
+ # ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~**~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~~*#
+*/
+
 #toast {
   visibility: hidden;
   width: 100%;
@@ -82,7 +192,16 @@
   border-left: 5px solid #d06421;
 }
 
-/* table style  */
+/*|| End toast style 
+===================================================================  */
+
+/*
+ *~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*#
+ #                              #
+ # Table style                  #
+ #                              #
+ # ~*~*~*~*~*~*~*~*~*~*~*~*~*~~*#
+*/
 
 .table {
   translate: -237px !important;
@@ -116,75 +235,447 @@ tr:nth-child(even) {
   margin-bottom: 20px;
 }
 
-/* general style */
+/*|| Table style  
+===================================================================  */
 
-html,
-body {
-  height: 90%;
+/*
+ *~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*#
+ #                                                                #
+ # Header style                                                   #
+ #                                                                #
+ # ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~#
+*/
+
+.navbar-nav {
+  position: absolute;
+  right: 60px;
+  z-index: 3;
 }
 
-.wrapper {
-  min-height: 90%;
-  display: flex;
-  flex-direction: column;
+.navbar-brand {
+  margin: 11px;
 }
 
-.footer {
-  margin-top: auto;
+.nav-item a {
+  border-radius: 10%;
+  transition: 0.7s;
+  color: inherit !important;
 }
 
-::selection {
-  background-color: red;
-  color: white;
+.nav-item a:hover {
+  background-color: rgba(242, 14, 14, 0.5);
+  color: white !important;
+  animation: forwards;
 }
 
-.red {
-  background-color: red;
-  color: white;
+/* media query mobile */
+
+@media (max-width: 991px) {
+  .navbar-nav {
+    float: none;
+    position: relative;
+    right: 0;
+    z-index: 3;
+  }
+
+  .navbar-brand {
+    margin: 20px;
+  }
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap");
-
-body {
-  font-family: "Lato", sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #333;
-  background-color: white;
-  overflow-x: hidden;
+@media (max-width: 491px) {
+  #margin {
+    padding: 0 10px !important;
+  }
 }
 
-h5 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 8px;
-  color: red;
+#navbar {
+  background-color: inherit;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 700;
 }
 
-.headline {
-  font-size: 4.5rem;
+.navbar-smaller {
+  height: 90px;
+  transition: 0.3s ease-in-out;
+}
+
+#navbarNav ul li:not(:first-child)::after {
+  content: "";
+  height: 30%;
+  width: 1px;
+  background-color: var(--colore-rosso);
+  position: absolute;
+  top: 22px;
+  translate: -10px;
+}
+
+/*|| End Header style 
+===================================================================  */
+
+/*
+ *~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*#
+ #                                                                #
+ # Hero section style                                             #
+ #                                                                #
+ # ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~#
+*/
+
+.carousel-item img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+}
+
+.carousel-item {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform 1s ease-in-out;
+}
+
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-item.active {
+  transform: translateX(0);
+}
+
+.carousel-item-next.carousel-item-left,
+.carousel-item-prev.carousel-item-right,
+.carousel-item.active.carousel-item-left {
+  transform: translateX(-100%);
+}
+
+.carousel-item-next.carousel-item-left,
+.carousel-item-prev.carousel-item-right,
+.carousel-item.active.carousel-item-right {
+  transform: translateX(100%);
+}
+
+.carousel-item-next,
+.carousel-item-prev {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 1s ease-in-out;
+}
+
+.carousel-item-next {
+  transform: translateX(100%);
+}
+
+.carousel-item-prev {
+  transform: translateX(-100%);
+}
+
+.carousel-item::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.carousel-caption {
+  z-index: 1;
+}
+
+/* testi hero */
+
+.carousel-caption {
+  left: 0;
+  text-align: left;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+.carousel-caption h5 {
+  margin-bottom: 0.5rem;
+  font-size: 5.25rem;
   font-weight: 900;
-  line-height: 1.2;
-  margin-bottom: 8px;
-  color: red;
+  color: white;
+  width: 50%;
 }
 
-/* media query mobile headline */
+.carousel-caption p {
+  margin-bottom: 1.25rem;
+  font-size: 1rem;
+  width: 50%;
+}
 
-@media screen and (max-width: 768px) {
-  .headline {
-    font-size: 2.5rem;
+.textstatic {
+  max-width: 400px;
+}
+
+.text-cont {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-section {
+  padding-top: 120px;
+}
+
+/*|| End Hero section
+===================================================================  */
+
+/*
+ *~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*#
+ #                                                                #
+ #          Card section style                                    #
+ #                                                                #
+ #~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*#
+*/
+
+/* card */
+
+.card-img-top {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.card-body a {
+  color: black;
+}
+
+.card-body a h5 {
+  color: var(--colore-rosso);
+}
+.card-body a:hover {
+  color: blue;
+}
+
+/* media query pc\mobile post  */
+
+@media (max-width: 768px) {
+  .pcpost {
+    display: none;
+  }
+  .carousel-caption h5 {
+    display: block;
+  }
+
+  .carousel-caption h5 {
+    margin-bottom: 7.5rem;
+
+    font-size: 3.25rem;
+    font-weight: 900;
+    color: white;
+    width: 50%;
+  }
+  .carousel-caption p {
+    display: none;
   }
 }
 
-@media screen and (max-width: 480px) {
-  .headline {
-    font-size: 1.5rem;
+@media (min-width: 768px) {
+  .mobilepost {
+    display: none;
+  }
+  .slider-controls {
+    display: none;
   }
 }
 
-.dark-mode {
-  background-color: #333 !important;
-  color: #fff;
+/* css per le card da mobile  */
+
+.mobilepost .slider {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  justify-content: center;
+  -webkit-overflow-scrolling: touch;
 }
+
+.mobilepost .card {
+  flex: 0 0 auto;
+  width: 85%;
+  height: 560px;
+  margin: 0 10px;
+  scroll-snap-align: center;
+}
+
+.slider-controls {
+  position: absolute;
+  top: 160%;
+  transform: translateY(-50%);
+  margin: 0;
+  width: 100%;
+  border: none;
+}
+
+#prevBtn {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  border: none;
+  background-color: transparent;
+}
+
+#nextBtn {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  border: none;
+  background-color: transparent;
+}
+
+/*|| End Card section style 
+===================================================================  */
+
+/*
+ *~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*#
+ #                                                                #
+ #          Form section style                                    #
+ #                                                                #
+ #~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*#
+*/
+
+.contform {
+  display: flex;
+  justify-content: center;
+}
+
+.width {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#form123 {
+  padding: 30px 200px;
+  margin-top: 60px;
+}
+
+#contact-form {
+  max-width: 600px;
+  margin: auto;
+}
+
+.form-group input {
+  width: 100%;
+  border: none;
+}
+
+/* media query mobili */
+
+@media screen and (max-width: 700px) {
+  .contform {
+    padding: 30px 10px;
+  }
+
+  #form123 {
+    padding: 30px 10px;
+  }
+
+  .marsis {
+    margin: 0 !important;
+  }
+}
+
+/*|| End Form section style 
+===================================================================  */
+
+/*
+ *~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*#
+ #                                                                #
+ #          Footer section style                                    #
+ #                                                                #
+ #~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*#
+*/
+
+.cont-fut {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  padding: 30px 150px 30px 150px;
+}
+
+.cont-log {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+li {
+  list-style: none;
+  margin: 10px;
+}
+
+li a,
+p a {
+  text-decoration: none;
+  color: white;
+}
+
+ul {
+  position: relative;
+}
+
+.format {
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+.copyright {
+  text-align: center;
+  padding: 10px;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* media query mobile */
+
+@media screen and (max-width: 600px) {
+  .cont-fut {
+    padding: 30px 30px 30px 30px;
+  }
+
+  .cont-log {
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .inline {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .logo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .format {
+    font-size: 10px;
+  }
+}
+
+/* media query mobile */
+
+@media screen and (max-width: 900px) {
+  .cursor {
+    display: none;
+  }
+}
+
+/*|| End Footer section style 
+===================================================================  */
