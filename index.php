@@ -90,11 +90,11 @@ include('includes/functions.php');
 
   if ($result->num_rows > 0) {
 
-?>
-    <?php while ($record = mysqli_fetch_assoc($result)) { ?>
+
+   while ($record = mysqli_fetch_assoc($result)) {    ?>
       <div class="container mt-5 pcpost">
         <div class="row">
-          <?php while ($record = mysqli_fetch_assoc($result)) { ?>
+          <?php while ($record = mysqli_fetch_assoc($result)) {?>
             <div class="col-md-6 mb-4">
               <div id="card" class="card  h-100">
                 <div class="card-body"><a  href="single.php?id=<?php echo $record['id']; ?>" >

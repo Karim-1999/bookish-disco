@@ -12,7 +12,7 @@ $connect = mysqli_connect('localhost', 'karim', 'secret', 'karim');
 if (mysqli_connect_errno()) {
     exit('Failed to connect to MySQL: ' . mysqli_connect_error());
 } ?>
-<!-- include database --> <?php include('includes/database.php'); ?>
+<!-- include database --> 
 <?php $nome = $_POST['firstname'];
 $cognome = $_POST['lastname'];
 $telefono = $_POST['phone'];

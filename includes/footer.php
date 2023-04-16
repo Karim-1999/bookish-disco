@@ -4,14 +4,14 @@
 
 <footer >
 
-  <div class=" cont-fut">
+  <div class=" cont-fut d-flex justify-content-between flex-wrap">
 
 
-    <div class="cont-log">
+    <div class=" d-flex flex-wrap">
 
       <img src="images/logocolorecambiato5.png" alt="logo" class="logo" width="200px" height="152px">
 
-      <div class="inline">
+      <div class="inline  ">
         <h3>Med srl </h3>
         <p>Via Fontevivo. 21 L - 19124 La Spezia (SP) </p>
         <p> P. IVA / CF. 01346970112</p>
@@ -23,15 +23,15 @@
 
       </div>
     </div>
-    <div id="dark-mode-toggle">
-      <div class="form-check form-switch">
+    <div >
+      <div id="dark-mode-toggle" class="form-check form-switch">
         <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
-        <label class="form-check-label" for="flexSwitchCheckDefault"><i class="fas fa-moon fa-lg"></i></label>
+        <label  class="form-check-label" for="flexSwitchCheckDefault"></label><i class="fas fa-moon fa-lg"></i>
       </div>
 
     </div>
 
-    <div>
+    <div class="menu-footer">
 
       <ul>
         <li> <a href="#">Chi siamo</a> </li>

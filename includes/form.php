@@ -13,7 +13,7 @@
 
             <!--Grid column-->
             <div class="col-md-9 m-5 mb-md-0 mb-5 marsis">
-                <form id="contact-form" name="contact-form" action="./mail.php" method="POST">
+                <form id="contact-form" name="contact-form" action="./mail" method="POST">
                     <div class="row ">
                         <div class="col-md-6">
                             <div class="form-group">
