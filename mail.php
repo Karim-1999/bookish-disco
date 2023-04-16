@@ -1,6 +1,7 @@
 <!-- include config -->
 <?php 
-include('includes/functions.php'); 
+include('includes/functions.php');
+include('includes/header.php'); 
 
 
 ?>
@@ -23,7 +24,10 @@ $result = $connect->query($sql);
 if (!$result) {
     die("Couldn't enter data: " . $connect->error);
 }
-echo "Thank You For Contacting Us  -->  <a href=\"index.php\" > To go back </a>  "
+
+echo "<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><h2>Thank You For Contacting Us  -->  <a href=\"index.php\" > To go back </a>  </h2><br><br<br><br><br><br><br><br><br><br><br>"; /**/
+
+set_message("Hi " . $nome . " we got your message");
 
 ; $connect->close();
  ?>
@@ -33,6 +37,8 @@ echo "Thank You For Contacting Us  -->  <a href=\"index.php\" > To go back </a> 
  ?>
 
 <?php 
+
+include('includes/footer.php');
 
 /* ho provato per mandare mail automatica tramite phpmailer ma non ci sono riuscito probabilmente sarà un mio problema su gmail 
 

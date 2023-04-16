@@ -71,7 +71,7 @@
 
     setTimeout(function() {
       toast.className = toast.className.replace(" show", "");
-    }, 3000);
+    }, 6000);
   }
 </script>
 
