@@ -646,8 +646,11 @@ ul {
   footer img{
     margin-left: auto;
     margin-right: auto;
-}
+} 
+.menu-footer {
+    display: none;
   }
+ 
 
   .inline {
     width: 100%;
@@ -665,8 +668,6 @@ ul {
     font-size: 15px;
   }
 
-  .menu-footer {
-    display: none;
   }
 
 
