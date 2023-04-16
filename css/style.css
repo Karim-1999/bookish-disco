@@ -556,6 +556,8 @@ tr:nth-child(even) {
 #form123 {
   padding: 30px 200px;
   margin-top: 60px;
+  background-color: rgb(245, 245, 245);
+  color: black;
 }
 
 #contact-form {
